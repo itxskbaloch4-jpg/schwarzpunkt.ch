@@ -1,0 +1,43 @@
+.spnkt-skip-link {
+  position: absolute; top: -48px; left: 12px;
+  background: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--black);
+  padding: 10px 18px; border-radius: 8px; font-weight: 700; z-index: 10000;
+  transition: top 0.2s ease;
+}
+.spnkt-skip-link:focus { top: 12px; }
+
+.spnkt-glass-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(24px);
+  border-radius: var(--wp--custom--radius--lg);
+  transition: var(--wp--custom--transition);
+}
+.spnkt-glass-card:hover { transform: translateY(-4px); }
+
+.spnkt-btn-accent .wp-block-button__link {
+  background: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--black);
+  border-radius: 100px; font-weight: 700; padding: 16px 36px;
+}
+.spnkt-btn-ghost .wp-block-button__link {
+  background: transparent; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 100px; padding: 14px 34px;
+}
+
+.spnkt-services-grid, .spnkt-stats { display: grid; gap: 20px; }
+.spnkt-why__item { display: flex; align-items: center; gap: 16px; padding: 18px 24px; }
+
+/* ── ACCESSIBILITY (WCAG 2.2 AA) ── */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--wp--preset--color--accent);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
